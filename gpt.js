@@ -1,3 +1,4 @@
+
 class Calculator {
   constructor(previousOperandTextElement, currentOperandTextElement) {
     this.previousOperandTextElement = previousOperandTextElement;
@@ -141,3 +142,11 @@ deleteButton.addEventListener("click", (button) => {
   calculator.delete();
   calculator.updateDisplay();
 });
+// Change the document title when user changes tab.
+let docTitle = Document.title;
+window.addEventListener("blur",()=>{
+document.title = "Come  Back I Luv you";
+})
+window.addEventListener("focus",()=>{
+  document.title = "CALCULATOR";
+})
